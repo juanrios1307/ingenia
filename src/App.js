@@ -1,24 +1,39 @@
 import logo from './logo.svg';
 import './App.css';
+import 'antd/dist/antd.css';
+
+import AppHeader from "./components/header";
+import AppBanner from "./components/banner";
+import AppAbout from "./components/about";
+import AppSponsors from "./components/sponsors";
+import AppSpeakers from "./components/speakers";
+import AppWorks from "./components/works";
+import AppPricing from "./components/pricing";
+import AppContact from "./components/contact";
+import AppFooter from "./components/footer";
+
+import { Layout } from 'antd';
+import {Content, Footer, Header} from "antd/es/layout/layout";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <Layout className="mainLayout">
+        <Header>
+          <AppHeader/>
+        </Header>
+        <Content>
+          <AppBanner/>
+          <AppSponsors/>
+          <AppSpeakers/>
+          <AppAbout/>
+          <AppWorks/>
+          <AppPricing/>
+          <AppContact/>
+        </Content>
+        <Footer>
+          <AppFooter/>
+        </Footer>
+      </Layout>
   );
 }
 
